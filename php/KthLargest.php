@@ -1,4 +1,5 @@
 <?php
+require "./TreeNode.php";
 
 /**
  * Class Solution
@@ -6,7 +7,7 @@
  * 问题：给定一棵二叉搜索树，请找出其中第k大的节点。
  * @link https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/
  */
-class Solution
+class KthLargest
 {
 
     /**
@@ -23,7 +24,7 @@ class Solution
      * @param int $k
      * @return int
      */
-    public function kthLargest($root, $k)
+    public function _kthLargest($root, $k)
     {
         $this->recur($root);
         $i = count($this->stack) - $k;
@@ -34,7 +35,7 @@ class Solution
      * recur方法用于进行中序遍历，并插入$stack数组
      * @param $root
      */
-    public function recur($root)
+    protected function recur($root)
     {
         if (is_null($root)) return;
         $this->recur($root->left);
@@ -43,25 +44,6 @@ class Solution
     }
 }
 
-/**
- * 树类
- * Class TreeNode
- * @package php
- */
-class TreeNode
-{
-    public $val, $left, $right;
-
-    public function __construct($val, $left = null, $right = null)
-    {
-        $this->val = $val;
-        $this->left = $left;
-        $this->right = $right;
-    }
-
-}
-
-$solution = new Solution();
 $tree = new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), new TreeNode(4));
 
-var_dump($solution->kthLargest($tree, 4));
+var_dump((new KthLargest())->_kthLargest($tree, 4));
