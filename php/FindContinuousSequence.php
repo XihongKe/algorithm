@@ -16,7 +16,7 @@ class FindContinuousSequence
      * @param Integer $target
      * @return Integer[][]
      */
-    function _findContinuousSequence($target)
+    public function _findContinuousSequence($target)
     {
         $max = (int)($target / 2) + 1;
         $result = [];

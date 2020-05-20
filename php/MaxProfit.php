@@ -18,7 +18,7 @@ class MaxProfit
      * @param $prices
      * @return int|mixed
      */
-    function _maxProfit($prices)
+    public function _maxProfit($prices)
     {
         $profit = 0;
         $cost = $prices[0];
