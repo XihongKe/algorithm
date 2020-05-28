@@ -24,14 +24,14 @@ func MinNumber(nums []int) string {
 	}
 
 	// 排序
-	sortedNums := quickSort(numsString)
+	sortedNums := quickSortString(numsString)
 
 	// 切片拼接成字符串返回
 	return strings.Join(sortedNums, "")
 }
 
 // 快速排序
-func quickSort(arr []string) []string {
+func quickSortString(arr []string) []string {
 	if len(arr) <= 1 {
 		return arr
 	}
@@ -47,8 +47,8 @@ func quickSort(arr []string) []string {
 		}
 	}
 
-	low = quickSort(low)
-	up = quickSort(up)
+	low = quickSortString(low)
+	up = quickSortString(up)
 
 	// 按顺序合并切片
 	return sliceMerge(low, []string{v}, up)
