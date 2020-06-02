@@ -9,7 +9,7 @@
 class IsStraight
 {
     /**
-     * 顺子的条件：1.没有非0重复数字；2.数组最大值减去非0最小值小于5
+     * 顺子的条件：1.没有非0重复数字；2.最大值减去非0最小值小于5
      * @param Integer[] $nums
      * @return Boolean
      */
