@@ -1,11 +1,11 @@
 package golang
 
 type ListNode struct {
-	Val int
+	Val  int
 	Next *ListNode
 }
 
-func ListNodeConstructor(nums []int) *ListNode{
+func ListNodeConstructor(nums []int) *ListNode {
 	listNode := &ListNode{nums[0], nil}
 	tmp := listNode
 	for i := 1; i < len(nums); i++ {

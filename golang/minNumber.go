@@ -14,12 +14,12 @@ import (
 若拼接字符串 "x" + "y" > "y" + "x" ，则 "x"排在 "y" 后面；
 反之，若 "x" + "y" < "y" + "x" ，则 "x" 排在 "y" 前面；
 根据以上规则，套用任何排序方法对 nums 执行排序即可。
- */
+*/
 func MinNumber(nums []int) string {
 	var numsString []string
 
 	// 切片转为字符串切片
-	for _, num := range nums  {
+	for _, num := range nums {
 		numsString = append(numsString, strconv.FormatInt(int64(num), 10))
 	}
 
@@ -40,9 +40,9 @@ func quickSortString(arr []string) []string {
 	var low, up []string
 	for i := 1; i < len(arr); i++ {
 		// 字符串 "x" + "y" > "y" + "x"，则"x"排在"y"后面
-		if v + arr[i] < arr[i] + v {
+		if v+arr[i] < arr[i]+v {
 			up = append(up, arr[i])
-		}else{
+		} else {
 			low = append(low, arr[i])
 		}
 	}

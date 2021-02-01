@@ -14,7 +14,7 @@ package golang
 原因：342 + 465 = 807
 
 由于数字的顺序是倒过来的，只需要做普通的加法运算（同位相加，大于9进1）即可
- */
+*/
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	// 假头
 	dummyHead := &ListNode{0, nil}

@@ -1,7 +1,5 @@
 package golang
 
-
-
 /**
 问题：输入两个整数序列，第一个序列表示栈的压入顺序，请判断第二个序列是否为该栈的弹出顺序。假设压入栈的所有数字均不相等。
 例如，序列 {1,2,3,4,5} 是某栈的压栈序列，序列 {4,5,3,2,1} 是该压栈序列对应的一个弹出序列，但 {4,3,5,1,2} 就不可能
@@ -11,7 +9,7 @@ package golang
 
 思路：使用一个辅助栈stack 遍历压入pushed,每次压入判断一次popped的第J个元素是否等于压入的元素，如果是，就弹出，j++；
 当循环结束，i和j都遍历了pushed和popped的时候，说明popped是pushed的弹出序列
- */
+*/
 func ValidateStackSequences(pushed []int, popped []int) bool {
 	if len(pushed) == 0 {
 		return true

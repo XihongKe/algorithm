@@ -23,7 +23,7 @@ import (
  1  3  -1  -3  5 [3  6  7]      7
 
 link：https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof
- */
+*/
 func MaxSlidingWindow(nums []int, k int) []int {
 	// 极端情况判断（空的数组、k值为1）
 	if len(nums) == 0 {
