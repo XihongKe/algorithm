@@ -46,4 +46,4 @@ class KthLargest
 
 $tree = new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), new TreeNode(4));
 
-var_dump((new KthLargest())->_kthLargest($tree, 4));
+var_dump((new KthLargest())->_kthLargest($tree, 5555));
